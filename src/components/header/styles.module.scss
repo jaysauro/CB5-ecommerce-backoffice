@@ -1,25 +1,21 @@
 .Header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     background: rgb(45, 45, 45);
     color: rgb(215, 215, 215);
-    box-shadow: 1px 1px 10px 5px rgb(160, 159, 159);
-}
-
-.logo {
-    width: 250px;
-    height: 40px;
-    margin: 5px;
-}
-
-.navbar {
-    display: flex;
     list-style: none;
-    gap: 20px;
     font-weight: bold;
-    margin: 16px 10px;
+    margin: 0;
+    padding: 20px 0;
+    box-shadow: 1px 1px 10px 5px rgb(160, 159, 159);
     li {
         cursor: pointer;
+    }
+    img {
+        width: 200px;
+        height: 30px;
+        
     }
 }
 

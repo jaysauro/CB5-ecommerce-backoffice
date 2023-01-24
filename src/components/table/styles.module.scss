@@ -1,0 +1,42 @@
+input, button {
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    background: rgb(45, 45, 45);
+    color: rgb(215, 215, 215);
+    margin: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+form {
+    margin: 10px;
+}
+
+h1 {
+    background: rgba(218, 251, 218, 0.683);
+    margin: 0;
+    padding: 30px;
+}
+
+h3 {
+    margin: 0;
+    padding: 20px;
+}
+
+.main {
+    background: rgba(218, 251, 218, 0.683);
+}
+
+.tableRow {
+    background: rgba(253, 156, 45, 0.735);
+    margin: 50px 0;
+}
+
+.name {
+    padding: 30px;
+    margin: 0;
+    text-align: start;
+}

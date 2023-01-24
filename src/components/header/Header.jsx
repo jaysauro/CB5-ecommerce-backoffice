@@ -1,16 +1,22 @@
 import styles from "./styles.module.scss";
+import { navBarLinks } from "./../../constants/navbar.js";
+import LiItems from "../liItems";
 
-const Header = () => {
-    return (
-        <div className={styles.Header}>
-            <img src="./logoHeader.png" alt="logo" className={styles.logo}></img>
-            <ul className={styles.navbar}>
-                <li>Categories</li>
-                <li>Contacts</li>
-                <li>FAQs</li>
-            </ul>
-        </div>
-    )
-}
+const Header = ({ setRoute }) => {
+  return (
+    <ul className={styles.Header}>
+      <img src="./logoHeader.png" alt="logo"></img>
+      {navBarLinks.map((item, index) => (
+        <LiItems
+          setRoute={setRoute}
+          routeUrl={item.route}
+          icon={item.icon}
+          key={item.id}
+          label={item.label}
+        />
+      ))}
+    </ul>
+  );
+};
 
 export default Header;
