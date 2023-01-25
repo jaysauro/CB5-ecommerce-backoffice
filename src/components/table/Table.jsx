@@ -1,18 +1,20 @@
+import Form from "../form/Form";
+import DeleteBtn from "../deleteBtn";
+import EditBtn from "../editBtn/EditBtn";
 import styles from "./styles.module.scss";
 
 
-const Table = ({ categoriesState, getData, loading }) => {
+const Table = ({ categoriesState, data, getData, loading }) => {
     return (
       <div className={styles.main}>
         <div className={styles.tableHead}>
           <div className={styles.description}>
             <div className={styles.formSection}>
               <h3>Add Categories</h3>
-              <form>
-                <input type="text" placeholder="Id here.."></input>
-                <input type="text" placeholder="Url image here.."></input>
-                <input type="text" placeholder="Name here.."></input>
-              </form>
+              <Form
+                data={data}
+                getData={getData}
+              />
             </div>
           </div>
           <button className={styles.refreshBtn} getData={getData}>Add</button>
@@ -26,8 +28,11 @@ const Table = ({ categoriesState, getData, loading }) => {
                 <h4 className={styles.name}>{item.name.substring(0, 20)}</h4>
                 <img src={item.image} alt={item.name} />
                 <div className={styles.btnSet}>
-                  <button className={styles.editBtn}>Edit</button>
-                  <button className={styles.deleteBtn}>Delete</button>
+                <EditBtn
+                  getData={getData}
+                  data={{ name: item.name, image: item.image, id: item.id }}
+                />
+                  <DeleteBtn getData={getData} id={item.id} />
                 </div>
               </div>
             ))}
