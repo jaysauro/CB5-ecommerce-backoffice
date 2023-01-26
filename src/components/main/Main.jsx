@@ -2,6 +2,7 @@ import { useState } from "react";
 import Categories from "../categories";
 import Header from "../header/Header";
 import Home from "../home";
+import Products from "../products/Products";
 import styles from "./styles.module.scss";
 
 const Main = () => {
@@ -15,7 +16,7 @@ const Main = () => {
         <div className={styles.dxColumn}>
           {route === "home" && <Home />}
           {route === "categories" && <Categories />}
-          {route === "products" && <div>Products</div>}
+          {route === "products" && <Products/>}
           {route === "orders" && <div>Orders</div>}
           {route === "users" && <div>Users</div>}
         </div>

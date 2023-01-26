@@ -32,7 +32,7 @@ const Table = ({ categoriesState, data, getData, loading }) => {
                   getData={getData}
                   data={{ name: item.name, image: item.image, id: item.id }}
                 />
-                  <DeleteBtn getData={getData} id={item.id} />
+                <DeleteBtn getData={getData} id={item.id} />
                 </div>
               </div>
             ))}
