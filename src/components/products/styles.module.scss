@@ -1,0 +1,20 @@
+.Products {
+    background: rgba(218, 251, 218, 0.683);
+}
+
+.ulProducts {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    div {
+        background: rgba(253, 156, 45, 0.735);
+        border-radius: 15px;
+        width: 80%;
+    }
+    li {
+        font-weight: bold;
+        cursor: default;
+    }
+}

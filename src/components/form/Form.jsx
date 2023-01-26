@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { POST, PUT } from "../../utils/HTTP";
+import styles from "./styles.module.scss";
 
 const Form = ({ getData, data }) => {
   const [edit, setEdit] = useState(false);
@@ -61,9 +62,9 @@ const Form = ({ getData, data }) => {
       />
 
       {edit ? (
-        <input type="submit" value="Edit"onClick={e => editForm(e)}/>
+        <input className={styles.btnForm}type="submit" value="Edit" onClick={e => editForm(e)}/>
       ) : (
-        <input type="submit" value="Send" onClick={e => submitForm(e) }/>
+        <input className={styles.btnForm} type="submit" value="Send" onClick={e => submitForm(e) }/>
       )}
     </form>
   );

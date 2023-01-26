@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { DELETE, GET } from "../../utils/HTTP";
-import LiProduct from "../LiProduct";
+import LiProduct from "../liProduct/LiProduct";
+import Form from "../form/Form";
+import styles from "./styles.module.scss";
 
-const Products = () => {
+const Products = (getData, data) => {
   const [products, setProducts] = useState([]);
 
   const reloadItems = () => {
@@ -25,8 +27,12 @@ const Products = () => {
   };
 
   return (
-    <div>
-      <ul>
+    <div className={styles.Products}>
+        <Form
+          data={data}
+          getData={getData}
+        />
+      <ul className={styles.ulProducts}>
         {products.map((item, index) => (
           <LiProduct
             reloadItems={reloadItems}
